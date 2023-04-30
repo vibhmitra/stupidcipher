@@ -18,7 +18,7 @@ theme_config:
   back_home_text: ".." # customize text for homepage link in post layout
   date_format: "" # customize how date is formatted
   date: date_to_xmlschema # added by vibh
-  show_description: false # show blog description in home page
+  show_description: truehow blog description in home page
 
 sass:
   style: :compressed
