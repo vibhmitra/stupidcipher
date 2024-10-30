@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <title>CryptoJS</title>
+  </head>
+  <body>
+      <form name="login" method="post" width="400px" onsubmit="encryptit();">
+        <input type="text" name="username" placeholder="username"><br><br>
+        <input type="password" name="password" placeholder="password">
+      </form>
+      <button type="submit">SUBMIT</button> 
+
+      
+    <script>
+      function encryptit() {
+        document.login.password.value = CryptoJS.MD5(document.login.password.value);
+      }
+      var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+​        
+      var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+
+    </script>
+  </body>
+</html>

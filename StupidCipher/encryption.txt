@@ -1,0 +1,4 @@
+http://www.movable-type.co.uk/scripts/aes.html
+https://stackoverflow.com/questions/793812/javascript-aes-encryption
+https://stackoverflow.com/questions/18279141/javascript-string-encryption-and-decryption
+https://w3c.github.io/webcrypto/

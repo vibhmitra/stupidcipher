@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+</head>
+
+<body>
+
+<form name="Input Interface" oninput="encryptit()">
+  <label for="plainText">Plain Text :</label><br>
+  <input type="text" id="plainText" name="plainText" placeholder="Plain Text"><br>
+  <label for="Key">Key:</label><br>
+  <input type="text" id="key" name="Key" placeholder="Key"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<strong><label>Encrypted Text : </label></strong>
+<span id="encryptedOut"></span>
+
+<br>
+
+<strong><label>Decrypted Text: </label></strong>
+<span id="decryptedOut"></span>
+
+<script>
+	function encryptit() {
+      		 var myString = document.getElementById("plainText").value;
+     		 var myPassword = document.getElementById("key").value;
+       
+     		 var encrypted = CryptoJS.AES.encrypt(myString, myPassword);
+       		 var decrypted = CryptoJS.AES.decrypt(myString, myPassword);
+       
+       		 document.getElementById("encryptedOut").innerHTML = encrypted;
+       		 document.getElementById("decryptedOut").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+       
+        }
+</script>
+
+</body>
+
+</html>
